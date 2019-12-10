@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 
@@ -15,9 +16,11 @@ public class Snack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotNull
     @NotBlank(message = "Name can't be empty.")
     @Size(min = 2, max = 40)
     private String name;
+    @NotNull
     @NotBlank(message = "")
     @DecimalMin(value = "0.50")
     private BigDecimal price;
