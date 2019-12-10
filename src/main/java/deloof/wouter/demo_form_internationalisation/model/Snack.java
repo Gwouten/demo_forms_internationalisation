@@ -16,12 +16,11 @@ public class Snack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotNull
-    @NotBlank(message = "Name can't be empty.")
-    @Size(min = 2, max = 40)
+    @NotNull(message = "Je moet een naam ingeven")
+    @NotBlank(message = "Je naam mag niet blanco zijn")
+    @Size(min = 2, max = 40, message = "Je moet een naam ingeven")
     private String name;
-    @NotNull
-    @NotBlank(message = "")
+    @NotNull(message = "Je moet een prijs ingeven")
     @DecimalMin(value = "0.50")
     private BigDecimal price;
 
