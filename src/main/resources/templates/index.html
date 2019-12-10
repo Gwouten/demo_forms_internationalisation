@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Snackbar</title>
+</head>
+<body>
+
+    <h1 class="header1">Snackbar</h1>
+
+    <table class="table">
+
+        <thead class="table__head">
+            <tr class="table__row table__row--head">
+                <th class="table__cell table__cell--head">Name</th>
+                <th class="table__cell table__cell--head">Price</th>
+            </tr>
+        </thead>
+
+        <tbody class="table__body">
+            <tr class="table__row" th:each="snack : ${snacks}">
+                <td class="table__cell" th:text="${snack.name}"></td>
+                <td class="table__cell" th:text="|€${snack.price}|"></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <section>
+
+        <h2 class="header2">Add new snack</h2>
+
+        <form action="" method="POST">
+
+            <div class="input">
+                <label for="name" class="input__label"></label>
+                <input id="name" type="text" class="input__text">
+            </div>
+
+            <div class="input">
+                <label for="price" class="input__label"></label>
+                <input id="price" type="number" class="input__text">
+            </div>
+
+            <div class="input">
+                <input type="submit">
+            </div>
+
+        </form>
+
+    </section>
+
+</body>
+</html>
