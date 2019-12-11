@@ -13,3 +13,35 @@
     0%   {opacity: 0.5}
     100% {opacity: 1}
 }
+
+body {
+    font-family: 'Bangers', cursive;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.header1 {
+    animation:
+        slideIn 1s forwards ease-out 1,
+        accordeon 1s alternate ease-in-out infinite;
+    font-size: 2.7rem;
+    text-align: center;
+    text-shadow: 0 5px 0 #000000;
+    color: #ffc537;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+@keyframes slideIn {
+    0%   {transform: translateY(-200px); opacity: 0}
+    100% {transform: translateY(0); opacity: 1}
+}
+
+@keyframes accordeon {
+    0%   {letter-spacing: 0}
+    100% {letter-spacing: 5px}
+}
+
