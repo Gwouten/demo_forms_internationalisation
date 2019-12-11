@@ -16,9 +16,7 @@ public class Snack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotNull(message = "Je moet een naam ingeven")
     @NotBlank(message = "Je naam mag niet blanco zijn")
-    @Size(min = 2, max = 40, message = "Je moet een naam ingeven")
     private String name;
     @NotNull(message = "Je moet een prijs ingeven")
     @DecimalMin(value = "0.50")
